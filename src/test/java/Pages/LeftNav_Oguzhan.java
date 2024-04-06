@@ -28,6 +28,7 @@ public class LeftNav_Oguzhan extends ParentPage{
             case "username" : return  this.username;
             case "password" : return  this.password;
             case "loginButton" : return  this.loginButton;
+            case "openNewAccount" : return  this.openNewAccount;
 
         }
         return null;

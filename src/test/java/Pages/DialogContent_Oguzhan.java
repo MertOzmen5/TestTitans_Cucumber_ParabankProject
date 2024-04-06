@@ -30,6 +30,23 @@ public class DialogContent_Oguzhan extends ParentPage {
 
 
 
+    public WebElement getWebElement(String strElement){
+
+        switch (strElement){
+            case "loginError" : return  this.loginError;
+            case "loginSuccess" : return  this.loginSuccess;
+            case "minimumDepositedAssert" : return  this.minimumDepositedAssert;
+            case "checking" : return  this.checking;
+            case "savings" : return  this.savings;
+            case "accountIdSelect" : return  this.accountIdSelect;
+            case "accountSuccessfully" : return  this.accountSuccessfully;
+            case "newAccountNumber" : return  this.newAccountNumber;
+            case "accountPage" : return  this.accountPage;
+
+        }
+        return null;
+    }
+
 
 
 

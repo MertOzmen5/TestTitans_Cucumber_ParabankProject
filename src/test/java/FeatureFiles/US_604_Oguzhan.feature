@@ -6,7 +6,7 @@ Feature: New Account Functionality
     Then User should login successfully
 
   Scenario: Create New Account
-    Given Click On The Open New Account
+    And Click On The Open New Account
       | openNewAccount |
 
     And Select The Account Type
