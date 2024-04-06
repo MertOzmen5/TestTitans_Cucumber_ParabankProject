@@ -16,7 +16,7 @@ public class ParentPage {
 
     public WebDriverWait wait=new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(7));
 
-    public void MyClick(WebElement element){
+    public void myClick(WebElement element){
 
         wait.until(ExpectedConditions.elementToBeClickable(element));// parametredeki elementi gönderiyoruz
         scrollToElement(element);

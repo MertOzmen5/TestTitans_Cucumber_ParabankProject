@@ -6,5 +6,5 @@ Feature: Login Functionality
     When Enter wrong username and password and click login button
     Then User should be not login successfully
 
-    When Enter wrong username and password and click login button
+    When Enter username and password and click login button
     Then User should login successfully
