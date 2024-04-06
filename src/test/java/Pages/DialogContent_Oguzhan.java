@@ -11,7 +11,7 @@ public class DialogContent_Oguzhan extends ParentPage {
 
     @FindBy(xpath = "//p[@class='error']")
     public WebElement loginError;
-    @FindBy(xpath = "//p[@class='smallText']//b")
+    @FindBy(xpath = "//p[@class='smallText']")
     public WebElement loginSuccess;
 
 
