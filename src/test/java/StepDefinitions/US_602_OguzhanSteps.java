@@ -19,7 +19,7 @@ public class US_602_OguzhanSteps {
     }
 
     @When("Enter wrong username {string} and password {string} and click login button")
-    public void enterWrongUsernameAndPasswordAndClickLoginButton(String arg0, String arg1) {
+    public void enterWrongUsernameAndPasswordAndClickLoginButton(String username, String password) {
         ln.mySendKeys(ln.username,"null");
         ln.mySendKeys(ln.password,"null");
     }
@@ -32,7 +32,7 @@ public class US_602_OguzhanSteps {
     }
 
     @When("Enter username {string} and password {string} and click login button")
-    public void enterUsernameAndPasswordAndClickLoginButton(String arg0, String arg1) {
+    public void enterUsernameAndPasswordAndClickLoginButton(String username, String password) {
         ln.mySendKeys(ln.username,"testTitans");
         ln.mySendKeys(ln.password,"9517536");
     }

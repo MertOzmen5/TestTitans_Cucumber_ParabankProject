@@ -17,6 +17,8 @@ public class LeftNav_Oguzhan extends ParentPage{
     public WebElement password;
     @FindBy(css = "[value='Log In']")
     public WebElement loginButton;
+    @FindBy(linkText = "Open New Account")
+    public WebElement openNewAccount;
 
 
 
@@ -26,6 +28,7 @@ public class LeftNav_Oguzhan extends ParentPage{
             case "username" : return  this.username;
             case "password" : return  this.password;
             case "loginButton" : return  this.loginButton;
+            case "openNewAccount" : return  this.openNewAccount;
 
         }
         return null;
