@@ -21,7 +21,7 @@ Feature: New Account Functionality
       | logo |
 
     And Click On The Open New Account Again
-      | openNewAccount2 |
+      | openNewAccount |
 
     And Select The Account Type Again
       | savings |

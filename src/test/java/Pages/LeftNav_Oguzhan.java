@@ -30,7 +30,6 @@ public class LeftNav_Oguzhan extends ParentPage{
 
         switch (strElement){
             case "openNewAccount" : return  this.openNewAccount;
-            case "openNewAccount2" : return  this.openNewAccount2;
             case "logo" : return  this.logo;
 
         }

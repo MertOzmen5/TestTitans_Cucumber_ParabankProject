@@ -63,7 +63,7 @@ public class US_604_OguzhanSteps {
         List<String> kategorilerList2 = kategoriler2.asList(String.class);
         for (int i = 0; i < kategorilerList2.size(); i++) {
             WebElement webElement = ln.getWebElement(kategorilerList2.get(i));
-            ln.myClick(ln.openNewAccount2);
+            ln.myClick(ln.openNewAccount);
 
 
         }
