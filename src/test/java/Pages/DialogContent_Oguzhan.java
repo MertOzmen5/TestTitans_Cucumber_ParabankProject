@@ -19,14 +19,17 @@ public class DialogContent_Oguzhan extends ParentPage {
     public WebElement checking;
     @FindBy(xpath = "[value='1']")
     public WebElement savings;
-    @FindBy(xpath = "//p[@class='smallText']")
+    @FindBy(css = "[value='Open New Account']")
+    public WebElement openNewAccountButton;
+    @FindBy(xpath = "[id='fromAccountId']")
     public WebElement accountIdSelect;
-    @FindBy(xpath = "//p[text()='Congratulations, your account is now open.']")
+    @FindBy(xpath = "[class='title']+p")
     public WebElement accountSuccessfully;
     @FindBy(css = "[id='newAccountId']")
     public WebElement newAccountNumber;
-    @FindBy(css = "[id='accountId']")
+    @FindBy(xpath = "//td[text()='Account Number:']")
     public WebElement accountPage;
+
 
 
 

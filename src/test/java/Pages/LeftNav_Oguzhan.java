@@ -19,16 +19,19 @@ public class LeftNav_Oguzhan extends ParentPage{
     public WebElement loginButton;
     @FindBy(linkText = "Open New Account")
     public WebElement openNewAccount;
+    @FindBy(linkText = "Open New Account")
+    public WebElement openNewAccount2;
+    @FindBy(css = "[class='logo']")
+    public WebElement logo;
 
 
 
     public WebElement getWebElement(String strElement){
 
         switch (strElement){
-            case "username" : return  this.username;
-            case "password" : return  this.password;
-            case "loginButton" : return  this.loginButton;
             case "openNewAccount" : return  this.openNewAccount;
+            case "openNewAccount2" : return  this.openNewAccount2;
+            case "logo" : return  this.logo;
 
         }
         return null;

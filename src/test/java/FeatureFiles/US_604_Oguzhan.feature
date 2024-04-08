@@ -18,9 +18,10 @@ Feature: New Account Functionality
       | accountSuccessfly |
       | newAccountNumber |
       | accountPage |
+      | logo |
 
     And Click On The Open New Account Again
-      | openNewAccount |
+      | openNewAccount2 |
 
     And Select The Account Type Again
       | savings |
