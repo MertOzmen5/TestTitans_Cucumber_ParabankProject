@@ -19,8 +19,6 @@ public class LeftNav_Oguzhan extends ParentPage{
     public WebElement loginButton;
     @FindBy(linkText = "Open New Account")
     public WebElement openNewAccount;
-    @FindBy(linkText = "Open New Account")
-    public WebElement openNewAccount2;
     @FindBy(css = "[class='logo']")
     public WebElement logo;
 

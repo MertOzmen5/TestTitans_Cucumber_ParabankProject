@@ -4,9 +4,8 @@ import Pages.DialogContent_Oguzhan;
 import Pages.LeftNav_Oguzhan;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import org.apache.pdfbox.pdmodel.graphics.optionalcontent.PDOptionalContentMembershipDictionary;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+
 
 import java.util.List;
 
@@ -31,38 +30,38 @@ public class US_604_OguzhanSteps {
 
     @And("Select The Account Type")
     public void selectTheAccountType(DataTable accountButonlari) {
-        List<String> butonlarList = accountButonlari.asList(String.class);
-
-        for (int i = 0; i < butonlarList.size(); i++) {
-            WebElement webElement = dc.getWebElement(butonlarList.get(i));
-            dc.verifyContainsText(dc.minimumDepositedAssert, "A minimum of $1.000,00 must be deposited into this account at time of opening. Please choose an existing account to transfer funds into the new account.");
+        List<String> accountButonlariList=accountButonlari.asList(String.class);
+        for (int i = 0; i < accountButonlariList.size(); i++) {
+            WebElement webElement = dc.getWebElement(accountButonlariList.get(i));
+            dc.verifyContainsText(dc.minimumDepositedAssert,"$100,00");
 //            dc.myClick(dc.checking);
-//            Select checkingSelect=new Select(dc.accountIdSelect);
-//            checkingSelect.s
+//            dc.myClick(dc.accountIdSelect);
             dc.myClick(dc.openNewAccountButton);
 
 
         }
+
     }
 
-    @And("Create Account Successfully")
-    public void createAccountSuccessfully(DataTable accountGiris) {
-       List<String> accountGirisList=accountGiris.asList(String.class);
-        for (int i = 0; i < accountGirisList.size(); i++) {
-            WebElement webElement=dc.getWebElement(accountGirisList.get(i));
-            dc.myClick(dc.accountSuccessfully);
-            dc.myClick(dc.newAccountNumber);
-            dc.myClick(dc.accountPage);
-            ln.myClick(ln.logo);
 
+    @And("Create Account Successfully")
+    public void createAccountSuccessfully(DataTable accountControl) {
+        List<String> accountControlList= accountControl.asList(String.class);
+        for (int i = 0; i < accountControlList.size(); i++) {
+            WebElement webElement =dc.getWebElement(accountControlList.get(i));
+            dc.verifyContainsText(dc.accountSuccessfully,"Congratulations, your account is now open.");
+            dc.myClick(dc.newAccountNumber);
+            dc.verifyContainsText(dc.accountPage,"Account Number:");
+            ln.myClick(ln.logo);
         }
     }
 
     @And("Click On The Open New Account Again")
-    public void clickOnTheOpenNewAccountAgain(DataTable kategoriler2) {
-        List<String> kategorilerList2 = kategoriler2.asList(String.class);
-        for (int i = 0; i < kategorilerList2.size(); i++) {
-            WebElement webElement = ln.getWebElement(kategorilerList2.get(i));
+    public void clickOnTheOpenNewAccountAgain(DataTable kategoriler) {
+        List<String> kategorilerList = kategoriler.asList(String.class);
+
+        for (int i = 0; i < kategorilerList.size(); i++) {
+            WebElement webElement = ln.getWebElement(kategorilerList.get(i));
             ln.myClick(ln.openNewAccount);
 
 
@@ -70,23 +69,27 @@ public class US_604_OguzhanSteps {
     }
 
     @And("Select The Account Type Again")
-    public void selectTheAccountTypeAgain(DataTable butonlar2) {
-        List<String> butonlarList2 = butonlar2.asList(String.class);
-        for (int i = 0; i < butonlarList2.size(); i++) {
-            WebElement webElement = dc.getWebElement(butonlarList2.get(i));
+    public void selectTheAccountTypeAgain(DataTable accountButonlari2) {
+        List<String> accountButonlariList2=accountButonlari2.asList(String.class);
+        for (int i = 0; i < accountButonlariList2.size(); i++) {
+            WebElement webElement = dc.getWebElement(accountButonlariList2.get(i));
             dc.myClick(dc.savings);
             dc.myClick(dc.accountIdSelect);
+            dc.myClick(dc.openNewAccountButton);
+
+
         }
     }
 
     @And("Create Account Successfully Again")
-    public void createAccountSuccessfullyAgain(DataTable accountGiris2) {
-        List<String> accountGirisList2 = accountGiris2.asList(String.class);
-        for (int i = 0; i < accountGirisList2.size(); i++) {
-            WebElement webElement = dc.getWebElement(accountGirisList2.get(i));
-            dc.myClick(dc.accountSuccessfully);
+    public void createAccountSuccessfullyAgain(DataTable accountControl2) {
+        List<String> accountControlList2= accountControl2.asList(String.class);
+        for (int i = 0; i < accountControlList2.size(); i++) {
+            WebElement webElement =dc.getWebElement(accountControlList2.get(i));
+            dc.verifyContainsText(dc.accountSuccessfully,"Congratulations, your account is now open.");
             dc.myClick(dc.newAccountNumber);
-            dc.myClick(dc.accountPage);
+            dc.verifyContainsText(dc.accountPage,"Account Number:");
+
         }
     }
 }
