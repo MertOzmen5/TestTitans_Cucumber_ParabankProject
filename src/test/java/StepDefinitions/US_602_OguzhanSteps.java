@@ -33,7 +33,7 @@ public class US_602_OguzhanSteps {
 
     @When("Enter username {string} and password {string} and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton(String username, String password) {
-        ln.mySendKeys(ln.username,"testTitans");
+        ln.mySendKeys(ln.username,"testTitans7");
         ln.mySendKeys(ln.password,"9517536");
     }
 

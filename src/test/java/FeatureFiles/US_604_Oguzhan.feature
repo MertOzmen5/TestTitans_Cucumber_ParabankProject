@@ -20,12 +20,12 @@ Feature: New Account Functionality
     And Account Successfully
       | newAccountNumber |
       | accountPage |
-      | logo |
       | openNewAccount|
 
     And Select The Account Type Again
       | savings |
       | accountIdSelect |
+      | openNewAccountButton |
 
     And Success Message Should Be Displayed
 
