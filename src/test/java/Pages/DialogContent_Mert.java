@@ -32,7 +32,7 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(xpath = "//input[@id='customer.phoneNumber']")
     public WebElement phone;
 
-    @FindBy(xpath = "//input[@name='customer.phoneNumber']")
+    @FindBy(xpath = "//input[@name='customer.ssn']")
     public WebElement ssnNumber;
 
     @FindBy(xpath = "//input[@name='customer.username']")

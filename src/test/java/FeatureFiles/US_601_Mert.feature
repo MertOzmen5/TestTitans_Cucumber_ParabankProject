@@ -1,7 +1,6 @@
 Feature: Register Functionality
 
-  Scenario: Register on Parabank website
-
+  Background:
     Given Navigate to Parabank
 
   Scenario Outline: Register Funcitonality
@@ -21,11 +20,13 @@ Feature: Register Functionality
       | passwordInput        | <password>        |
       | confirmPasswordInput | <confirmPassword> |
 
-    Examples:
-      | fName | lName   | address | city     | state   | zipCode | phoneNumber | ssnNumber | userName   | password | confirmPassword |
-      | David | Mahoney | Beyoglu | Istanbul | Turkiye | 234     | 456         | 345       | testTitans | 9517536  | 9517536         |
-
     And Click on the Element in Dialog
       | confirmRegisterBtn |
 
     And  User should be register successfullied
+
+
+    Examples:
+      | fName | lName   | address | city     | state   | zipCode | phoneNumber | ssnNumber | userName   | password | confirmPassword |
+      | David | Mahoney | Beyoglu | Istanbul | Turkiye | 234     | 456         | 345       | testTitans7 | 9517536  | 9517536         |
+
