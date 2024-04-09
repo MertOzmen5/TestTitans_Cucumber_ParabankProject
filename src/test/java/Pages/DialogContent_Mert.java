@@ -6,57 +6,73 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DialogContent_Mert extends ParentPage{
-    public DialogContent_Mert() {PageFactory.initElements(GWD.getDriver(),this);}
+public class DialogContent_Mert extends ParentPage {
+    public DialogContent_Mert() {
+        PageFactory.initElements(GWD.getDriver(), this);
+    }
 
-    @FindBy (css = "[id='customer.firstName']")
+    @FindBy(css = "[id='customer.firstName']")
     public WebElement firstName;
 
-    @FindBy (css = "[id='customer.lastName']")
+    @FindBy(css = "[id='customer.lastName']")
     public WebElement lastName;
 
-    @FindBy (css = "[id='customer.address.street']")
+    @FindBy(css = "[id='customer.address.street']")
     public WebElement address;
 
-    @FindBy (css = "[id='customer.address.city']")
+    @FindBy(css = "[id='customer.address.city']")
     public WebElement city;
 
-    @FindBy (xpath = "//input[@name='customer.address.state']")
+    @FindBy(xpath = "//input[@name='customer.address.state']")
     public WebElement state;
 
-    @FindBy (xpath = "//input[@id='customer.address.zipCode']")
+    @FindBy(xpath = "//input[@id='customer.address.zipCode']")
     public WebElement zipCode;
 
-    @FindBy (xpath = "//input[@id='customer.phoneNumber']")
+    @FindBy(xpath = "//input[@id='customer.phoneNumber']")
     public WebElement phone;
 
-    @FindBy (xpath = "//input[@name='customer.phoneNumber']")
+    @FindBy(xpath = "//input[@name='customer.phoneNumber']")
     public WebElement ssnNumber;
 
-    @FindBy (xpath = "//input[@name='customer.username']")
+    @FindBy(xpath = "//input[@name='customer.username']")
     public WebElement userName;
 
-    @FindBy (xpath = "//input[@name='customer.password']")
+    @FindBy(xpath = "//input[@name='customer.password']")
     public WebElement password;
 
-    @FindBy (css = "[id='repeatedPassword']")
+    @FindBy(css = "[id='repeatedPassword']")
     public WebElement confirmPassword;
 
-    @FindBy (css = "[value='Register']")
+    @FindBy(css = "[value='Register']")
     public WebElement registerBtn;
 
+    public WebElement getWebElement(String element) {
 
-
-
-
-
-
-
-
-
-
-
-
+        switch (element) {
+            case "firstNameInput":
+                return this.firstName;
+            case "lastNameInput":
+                return this.lastName;
+            case "addressInput":
+                return this.address;
+            case "cityInput":
+                return this.city;
+            case "stateInput":
+                return this.state;
+            case "zipCodeInput":
+                return this.zipCode;
+            case "ssnNumberInput":
+                return this.ssnNumber;
+            case "userNameInput":
+                return this.userName;
+            case "passwordInput":
+                return this.password;
+            case "confirmPasswordInput":
+                return this.confirmPassword;
+        }
+        return null;
+    }
 
 
 }

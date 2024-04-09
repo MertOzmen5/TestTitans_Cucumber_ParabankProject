@@ -10,4 +10,5 @@ public class LeftNav_Mert extends ParentPage{
 
     @FindBy(xpath = "//a[text()='Register']")
     public WebElement registerButton;
+
 }
