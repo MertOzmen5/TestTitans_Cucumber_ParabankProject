@@ -21,8 +21,8 @@ public class US_601_MertStepDefinitions {
         List<String> buttonsInLeftNav = leftNavButtons.asList(String.class);
 
         for (int i = 0; i < buttonsInLeftNav.size(); i++) {
-            WebElement elementButtonLeftNav = dcm.getWebElement(buttonsInLeftNav.get(i));
-            dcm.myClick(elementButtonLeftNav);
+            WebElement elementButtonLeftNav = lfm.getWebElement(buttonsInLeftNav.get(i));
+            lfm.myClick(elementButtonLeftNav);
         }
     }
 
@@ -38,6 +38,7 @@ public class US_601_MertStepDefinitions {
 
     @And("User should be register successfullied")
     public void userShouldBeLoginSuccessfullied() {
+        dcm.verifyContainsText(dcm.confirmRegisterMsg, "Your account was created successfully. You are now logged in");
     }
 
     @And("Click on the Element in Dialog")

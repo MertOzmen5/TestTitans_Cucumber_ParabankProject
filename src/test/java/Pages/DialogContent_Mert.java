@@ -75,6 +75,8 @@ public class DialogContent_Mert extends ParentPage {
                 return this.password;
             case "confirmPasswordInput":
                 return this.confirmPassword;
+            case "confirmRegisterBtn":
+                return this.registerBtn;
         }
         return null;
     }
