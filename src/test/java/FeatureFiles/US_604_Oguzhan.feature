@@ -15,23 +15,25 @@ Feature: New Account Functionality
       | accountIdSelect |
       | openNewAccountButton |
 
-    And Create Account Successfully
-      | accountSuccessfully |
+    And Success Message Should Be Displayed
+
+    And Account Successfully
       | newAccountNumber |
       | accountPage |
       | logo |
-
-    And Click On The Open New Account Again
       | openNewAccount|
 
     And Select The Account Type Again
       | savings |
       | accountIdSelect |
 
+    And Success Message Should Be Displayed
+
     And Create Account Successfully Again
-      | accountSuccessfully |
       | newAccountNumber |
-      | accountPage |
+
+    And Success Account Page Control Should Be Displayed
+
 
 
 
