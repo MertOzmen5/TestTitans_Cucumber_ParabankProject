@@ -13,23 +13,27 @@ Feature: New Account Functionality
       | minimumDepositedAssert |
       | checking |
       | accountIdSelect |
+      | openNewAccountButton |
 
-    And Create Account Successfully
-      | accountSuccessfly |
+    And Success Message Should Be Displayed
+
+    And Account Successfully
       | newAccountNumber |
       | accountPage |
-
-    And Click On The Open New Account Again
-      | openNewAccount |
+      | logo |
+      | openNewAccount|
 
     And Select The Account Type Again
       | savings |
       | accountIdSelect |
 
+    And Success Message Should Be Displayed
+
     And Create Account Successfully Again
-      | accountSuccessfly |
       | newAccountNumber |
-      | accountPage |
+
+    And Success Account Page Control Should Be Displayed
+
 
 
 
