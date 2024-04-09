@@ -47,6 +47,9 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(css = "[value='Register']")
     public WebElement registerBtn;
 
+    @FindBy(xpath = "//p[text()='Your account was created successfully. You are now logged in.']")
+    public WebElement confirmRegisterMsg;
+
     public WebElement getWebElement(String element) {
 
         switch (element) {
@@ -62,6 +65,8 @@ public class DialogContent_Mert extends ParentPage {
                 return this.state;
             case "zipCodeInput":
                 return this.zipCode;
+            case "phoneNumberInput":
+                return this.phone;
             case "ssnNumberInput":
                 return this.ssnNumber;
             case "userNameInput":

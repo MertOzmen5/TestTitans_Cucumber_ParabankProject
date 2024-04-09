@@ -13,24 +13,41 @@ import javax.xml.crypto.Data;
 import java.util.List;
 
 public class US_601_MertStepDefinitions {
-    LeftNav_Mert lfm=new LeftNav_Mert();
-    DialogContent_Mert dcm=new DialogContent_Mert();
-    @When("Click the register button")
-    public void clickTheRegisterButton() {
-        lfm.myClick(lfm.registerButton);
+    LeftNav_Mert lfm = new LeftNav_Mert();
+    DialogContent_Mert dcm = new DialogContent_Mert();
+
+    @When("Click on the element in LeftNav")
+    public void clickOnTheElementInLeftNav(DataTable leftNavButtons) {
+        List<String> buttonsInLeftNav = leftNavButtons.asList(String.class);
+
+        for (int i = 0; i < buttonsInLeftNav.size(); i++) {
+            WebElement elementButtonLeftNav = dcm.getWebElement(buttonsInLeftNav.get(i));
+            dcm.myClick(elementButtonLeftNav);
+        }
     }
 
     @Then("Fill in Registration information as a user and click the register button")
     public void fillInRegistrationInformationAsAUserAndClickTheRegisterButton(DataTable textAndKeys) {
-        List<List<String>> listText=textAndKeys.asLists(String.class);
+        List<List<String>> listText = textAndKeys.asLists(String.class);
 
-        for (int i = 0; i < listText.size() ; i++) {
-            WebElement textElement= dcm.getWebElement(listText.get(i).get(0));
-            dcm.mySendKeys(textElement,listText.get(i).get(1));
+        for (int i = 0; i < listText.size(); i++) {
+            WebElement textElement = dcm.getWebElement(listText.get(i).get(0));
+            dcm.mySendKeys(textElement, listText.get(i).get(1));
         }
     }
+
     @And("User should be register successfullied")
     public void userShouldBeLoginSuccessfullied() {
     }
 
+    @And("Click on the Element in Dialog")
+    public void clickOnTheElementInDialog(DataTable buttons) {
+        List<String> buttonsList = buttons.asList(String.class);
+
+        for (int i = 0; i < buttonsList.size(); i++) {
+            WebElement elementButton = dcm.getWebElement(buttonsList.get(i));
+            dcm.myClick(elementButton);
+
+        }
+    }
 }
