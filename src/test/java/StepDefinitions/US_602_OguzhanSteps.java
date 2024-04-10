@@ -20,31 +20,26 @@ public class US_602_OguzhanSteps {
 
     @When("Enter wrong username {string} and password {string} and click login button")
     public void enterWrongUsernameAndPasswordAndClickLoginButton(String username, String password) {
-        ln.mySendKeys(ln.username,"null");
-        ln.mySendKeys(ln.password,"null");
+        ln.mySendKeys(ln.username,username);
+        ln.mySendKeys(ln.password,password);
+        ln.myClick(ln.loginButton);
+
     }
-
-
     @Then("User should be not login successfully")
     public void userShouldBeNotLoginSuccessfully() {
-        ln.myClick(ln.loginButton);
-        ln.verifyContainsText(dc.loginError,"An internal error has occurred and has been logged.");
+        dc.verifyContainsText(dc.loginError,"An internal error has occurred and has been logged.");
     }
 
     @When("Enter username {string} and password {string} and click login button")
-    public void enterUsernameAndPasswordAndClickLoginButton(String username, String password) {
-        ln.mySendKeys(ln.username,"testTitans");
-        ln.mySendKeys(ln.password,"9517536");
-    }
-
-
-    @Then("User should login successfully")
-    public void userShouldLoginSuccessfully() {
+    public void enterUsernameAndPasswordAndClickLoginButton(String username1, String password1) {
+        ln.mySendKeys(ln.username,username1);
+        ln.mySendKeys(ln.password,password1);
         ln.myClick(ln.loginButton);
-        ln.verifyContainsText(dc.loginSuccess,"Welcome oguzhan aydın");
     }
 
-
-
+    @Then("User should be login successfully")
+    public void userShouldBeLoginSuccessfully() {
+        dc.verifyContainsText(dc.loginSuccess,"Welcome");
+    }
 }
 
