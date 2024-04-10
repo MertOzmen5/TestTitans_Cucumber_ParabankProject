@@ -55,4 +55,15 @@ public class US_603_ZehraSteps {
 
         }
     }
+
+    @And("Click to see Accounts Overview")
+    public void clickToSeeAccountsOverview(DataTable buttons) {
+        List<String> buttonsList = buttons.asList(String.class);
+
+        for (int i = 0; i < buttonsList.size(); i++) {
+            WebElement elementButton = ln.getWebElement(buttonsList.get(i));
+            ln.myClick(elementButton);
+
+        }
+    }
 }

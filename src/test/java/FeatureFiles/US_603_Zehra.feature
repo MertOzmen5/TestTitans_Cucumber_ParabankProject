@@ -22,9 +22,17 @@ Feature: Paying Bills Functionality
     And Click on the Send Payment Button
       | sendPayment |
 
+    And Click to see Accounts Overview
+      | accountOverview |
+      | accountClick    |
+      | accountClick    |
+
+
 
     Examples:
       | namePayee | addressPayee     | cityPayee | statePayee | zipcodePayee | pNoPayee    | accountNoPayee | vrfyAccount | amountPayee |
-      | EnerjiSa  | Üzüm Sokak No:26 | Sarıyer   | İstanbul   | 34096        | 05425638796 | 1122           | 1122        | 85          |
+      | İgdaş     | Üzüm Sokak No:26 | Sarıyer   | İstanbul   | 34096        | 05425638796 | 1122           | 1122        | 85          |
+
+
 
 

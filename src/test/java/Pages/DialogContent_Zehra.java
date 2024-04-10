@@ -28,6 +28,7 @@ public class DialogContent_Zehra extends ParentPage{
     public WebElement verifyAccount;
     @FindBy(css = "[name='amount']")
     public WebElement amount;
+
     @FindBy(css = "[value='Send Payment']")
     public WebElement sendPayment;
 

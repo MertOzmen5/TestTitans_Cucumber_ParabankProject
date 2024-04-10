@@ -17,12 +17,18 @@ public class LeftNav_Zehra extends ParentPage{
     public WebElement loginButton;
     @FindBy(xpath = "//div[@id='leftPanel']/ul/li[4]")
     public WebElement billPay;
+    @FindBy(xpath = "//div[@id='leftPanel']/ul/li[2]")
+    public WebElement accountOverview;
+    @FindBy(xpath = "//tr[@class='ng-scope'][2]/td/a")
+    public WebElement accountClick;
 
 
     public WebElement getWebElement(String strElement){
 
         switch (strElement){
             case "billPay" : return  this.billPay;
+            case "accountOverview" : return  this.accountOverview;
+            case "accountClick" : return  this.accountClick;
 
         }
         return null;
