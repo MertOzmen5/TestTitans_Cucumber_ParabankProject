@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent_Mert extends ParentPage {
     public DialogContent_Mert() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -50,6 +52,27 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(xpath = "//p[text()='Your account was created successfully. You are now logged in.']")
     public WebElement confirmRegisterMsg;
 
+    @FindBy(css = "[id='toAccountId']")
+    public WebElement selectAccountButton;
+
+    @FindBy (css = "[id='toAccountId']>option:nth-child(2)")
+    public WebElement transferAccount;
+
+    @FindBy (css = "[id='amount']")
+    public WebElement transferAmount;
+
+    @FindBy (css = "[value='Transfer']")
+    public  WebElement transferButton;
+
+    @FindBy (css = "[class='title']+p>span")
+    public List<WebElement> text;
+
+    @FindBy (xpath = "(//tr[@ng-repeat='account in accounts']//a)[1]")
+    public WebElement confirmTransfer;
+
+    @FindBy (xpath = "//td[text()='$735.00']")
+    public WebElement moneyValue;
+
     public WebElement getWebElement(String element) {
 
         switch (element) {
@@ -77,6 +100,18 @@ public class DialogContent_Mert extends ParentPage {
                 return this.confirmPassword;
             case "confirmRegisterBtn":
                 return this.registerBtn;
+            case "selectAccountButton":
+                return this.selectAccountButton;
+            case "transferAccount":
+                return this.transferAccount;
+            case "transferAmount":
+                return this.transferAmount;
+            case "transferButton":
+                return this.transferButton;
+            case "confirmTransfer":
+                return this.confirmTransfer;
+            case "moneyValue":
+                return this.moneyValue;
         }
         return null;
     }
