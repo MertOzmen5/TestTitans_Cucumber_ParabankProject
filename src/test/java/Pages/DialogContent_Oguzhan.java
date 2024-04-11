@@ -17,6 +17,8 @@ public class DialogContent_Oguzhan extends ParentPage {
     public WebElement minimumDepositedAssert;
     @FindBy(css = "[value='0']")
     public WebElement checking;
+    @FindBy(css = "div[id='rightPanel'] select:nth-child(2)")
+    public WebElement select;
     @FindBy(css = "[value='1']")
     public WebElement savings;
     @FindBy(css = "[value='Open New Account']")

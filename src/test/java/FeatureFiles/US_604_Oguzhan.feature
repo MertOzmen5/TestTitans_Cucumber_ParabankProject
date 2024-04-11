@@ -2,22 +2,25 @@ Feature: New Account Functionality
 
   Background:
     Given Navigate to Parabank
+
+  Scenario Outline:
     When Enter username "<username1>" and password "<password1>" and click login button
-    Then User should be login successfully
 
-
+    Examples:
+      | username1 | password1 |
+      | testTitans7 | 9517536   |
 
   Scenario: Create New Account
-    And Click On The Open New Account
+    Given Click On The Open New Account
       | openNewAccount |
 
-    And Select The Account Type
+    When Select The Account Type
       | minimumDepositedAssert |
       | checking |
       | accountIdSelect |
       | openNewAccountButton |
 
-    And Success Message Should Be Displayed
+    Then Success Message Should Be Displayed
 
     And Account Successfully
       | newAccountNumber |
@@ -35,6 +38,9 @@ Feature: New Account Functionality
       | newAccountNumber |
 
     And Success Account Page Control Should Be Displayed
+
+
+
 
 
 
