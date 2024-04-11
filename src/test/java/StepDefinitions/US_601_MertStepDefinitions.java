@@ -48,7 +48,6 @@ public class US_601_MertStepDefinitions {
         for (int i = 0; i < buttonsList.size(); i++) {
             WebElement elementButton = dcm.getWebElement(buttonsList.get(i));
             dcm.myClick(elementButton);
-
         }
     }
 }

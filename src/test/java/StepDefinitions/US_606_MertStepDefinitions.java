@@ -35,6 +35,6 @@ public class US_606_MertStepDefinitions {
 
     @And("Money transfer was successful")
     public void moneyTransferWasSuccessful() {
-        dcm.verifyContainsText(dcm.money,"$735.00");
+       Assert.assertTrue(dcm.money.getText().contains("$735.00"));
     }
 }
