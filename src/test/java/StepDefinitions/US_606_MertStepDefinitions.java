@@ -12,21 +12,25 @@ import java.util.List;
 public class US_606_MertStepDefinitions {
     LeftNav_Mert lfm = new LeftNav_Mert();
     DialogContent_Mert dcm = new DialogContent_Mert();
+    int money1=(int)(Math.random()*800);
+    String strMoney1=String.valueOf(money1);
 
     @And("User must enter the amount of money")
     public void userMustEnterTheAmountOfMoney(DataTable amount) {
+        int money=(int)(Math.random()*800);
+        String strMoney=String.valueOf(money);
         List<String> amountList = amount.asList(String.class);
 
         for (int i = 0; i < amountList.size(); i++) {
             WebElement amountValue = dcm.getWebElement(amountList.get(i));
-            dcm.mySendKeys(amountValue, "735");
+            dcm.mySendKeys(amountValue,strMoney);
         }
     }
 
     @And("Money transfer must be successfull")
     public void moneyTransferMustBeSuccessfull() {
         for (int i = 0; i <dcm.text.size() ; i++) {
-            Assert.assertEquals(dcm.text.get(i).getText(),"$735.00");
+            Assert.assertEquals(dcm.text.get(i).getText(),strMoney1);
             Assert.assertEquals(dcm.text.get(i).getText(),"20115");
             Assert.assertEquals(dcm.text.get(i).getText(),"20892");
 
@@ -35,6 +39,7 @@ public class US_606_MertStepDefinitions {
 
     @And("Money transfer was successful")
     public void moneyTransferWasSuccessful() {
-       Assert.assertTrue(dcm.money.getText().contains("$735.00"));
+        System.out.println(dcm.confirmText.getText());
+       Assert.assertTrue(dcm.confirmText.getText().contains(strMoney1));
     }
 }
