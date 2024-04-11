@@ -7,7 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DialogContent_Oguzhan extends ParentPage {
 
-    public DialogContent_Oguzhan() {PageFactory.initElements(GWD.getDriver(),this);}
+    public DialogContent_Oguzhan() {
+        PageFactory.initElements(GWD.getDriver(), this);
+    }
 
     @FindBy(xpath = "//p[@class='error']")
     public WebElement loginError;
@@ -17,10 +19,10 @@ public class DialogContent_Oguzhan extends ParentPage {
     public WebElement minimumDepositedAssert;
     @FindBy(css = "[value='0']")
     public WebElement checking;
-    @FindBy(css = "div[id='rightPanel'] select:nth-child(2)")
-    public WebElement select;
     @FindBy(css = "[value='1']")
     public WebElement savings;
+    @FindBy(css = "div[id='rightPanel'] select:nth-child(2)")
+    public WebElement select;
     @FindBy(css = "[value='Open New Account']")
     public WebElement openNewAccountButton;
     @FindBy(css = "[id='fromAccountId']")
@@ -31,40 +33,44 @@ public class DialogContent_Oguzhan extends ParentPage {
     public WebElement newAccountNumber;
     @FindBy(xpath = "//td[text()='Account Number:']")
     public WebElement accountPage;
+    @FindBy(xpath = "//a[text()='Open New Account']")
+    public WebElement openNewAccount;
+    @FindBy(css = "[class='logo']")
+    public WebElement logo;
 
 
+    public WebElement getWebElement(String strElement) {
 
-
-    public WebElement getWebElement(String strElement){
-
-        switch (strElement){
-            case "loginError" : return  this.loginError;
-            case "loginSuccess" : return  this.loginSuccess;
-            case "minimumDepositedAssert" : return  this.minimumDepositedAssert;
-            case "checking" : return  this.checking;
-            case "savings" : return  this.savings;
-            case "accountIdSelect" : return  this.accountIdSelect;
-            case "openNewAccountButton" : return  this.openNewAccountButton;
-            case "accountSuccessfully" : return  this.accountSuccessfully;
-            case "newAccountNumber" : return  this.newAccountNumber;
-            case "accountPage" : return  this.accountPage;
+        switch (strElement) {
+            case "loginError":
+                return this.loginError;
+            case "loginSuccess":
+                return this.loginSuccess;
+            case "minimumDepositedAssert":
+                return this.minimumDepositedAssert;
+            case "checking":
+                return this.checking;
+            case "savings":
+                return this.savings;
+            case "accountIdSelect":
+                return this.accountIdSelect;
+            case "openNewAccountButton":
+                return this.openNewAccountButton;
+            case "accountSuccessfully":
+                return this.accountSuccessfully;
+            case "newAccountNumber":
+                return this.newAccountNumber;
+            case "accountPage":
+                return this.accountPage;
+            case "openNewAccount":
+                return this.openNewAccount;
+            case "logo":
+                return this.logo;
 
 
         }
         return null;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
