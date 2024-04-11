@@ -73,6 +73,9 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy (xpath = "//td[text()='$735.00']")
     public WebElement moneyValue;
 
+    @FindBy (xpath = "//td[text()='$735,00']")
+    public WebElement money;
+
     public WebElement getWebElement(String element) {
 
         switch (element) {
@@ -112,6 +115,8 @@ public class DialogContent_Mert extends ParentPage {
                 return this.confirmTransfer;
             case "moneyValue":
                 return this.moneyValue;
+            case "money":
+                return this.money;
         }
         return null;
     }

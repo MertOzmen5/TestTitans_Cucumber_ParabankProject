@@ -27,3 +27,5 @@ Feature: Transfer Funds Functionality
     And Click on the Element in Dialog
       | confirmTransfer |
       | moneyValue      |
+
+    And Money transfer was successful

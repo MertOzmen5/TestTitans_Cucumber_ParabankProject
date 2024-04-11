@@ -32,4 +32,9 @@ public class US_606_MertStepDefinitions {
 
         }
     }
+
+    @And("Money transfer was successful")
+    public void moneyTransferWasSuccessful() {
+        dcm.verifyContainsText(dcm.money,"$735.00");
+    }
 }
