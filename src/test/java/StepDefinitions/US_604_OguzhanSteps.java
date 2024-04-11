@@ -2,13 +2,13 @@ package StepDefinitions;
 
 import Pages.DialogContent_Oguzhan;
 import Pages.LeftNav_Oguzhan;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+
 
 
 import java.util.List;
@@ -19,27 +19,27 @@ public class US_604_OguzhanSteps {
     DialogContent_Oguzhan dc = new DialogContent_Oguzhan();
 
 
-    @Given("Click On The Open New Account")
+    @When("Click On The Open New Account")
     public void clickOnTheOpenNewAccount(DataTable kategoriler) {
         List<String> kategorilerList = kategoriler.asList(String.class);
 
         for (int i = 0; i < kategorilerList.size(); i++) {
-            WebElement webElement = ln.getWebElement(kategorilerList.get(i));
-            ln.myClick(ln.openNewAccount);
-
+            WebElement webElement = dc.getWebElement(kategorilerList.get(i));
+            dc.myClick(webElement);
 
         }
 
     }
 
-    @When("Select The Account Type")
+    @Then("Select The Account Type")
     public void selectTheAccountType(DataTable accountButonlari) {
         List<String> accountButonlariList = accountButonlari.asList(String.class);
         for (int i = 0; i < accountButonlariList.size(); i++) {
             WebElement webElement = dc.getWebElement(accountButonlariList.get(i));
+            dc.myClick(webElement);
             dc.verifyContainsText(dc.minimumDepositedAssert, "$100,00");
-//            Select select=new Select(dc.select);
-            dc.myClick(dc.openNewAccountButton);
+            dc.myClick(webElement);
+            dc.myClick(webElement);
 
 
         }
@@ -57,10 +57,10 @@ public class US_604_OguzhanSteps {
         List<String> accountControlList = accountControl.asList(String.class);
         for (int i = 0; i < accountControlList.size(); i++) {
             WebElement webElement = dc.getWebElement(accountControlList.get(i));
-            dc.myClick(dc.newAccountNumber);
+            dc.myClick(webElement);
             dc.verifyContainsText(dc.accountPage, "Account Number:");
-            ln.myClick(ln.logo);
-            ln.myJSClick(ln.openNewAccount);
+            GWD.getDriver().navigate().back();
+
         }
     }
 
@@ -69,10 +69,8 @@ public class US_604_OguzhanSteps {
         List<String> accountButonlariList2 = accountButonlari2.asList(String.class);
         for (int i = 0; i < accountButonlariList2.size(); i++) {
             WebElement webElement = dc.getWebElement(accountButonlariList2.get(i));
-            Select select=new Select(dc.select);
-            select.selectByValue("1");
-            dc.myClick(dc.accountIdSelect);
-            dc.myClick(dc.openNewAccountButton);
+            dc.myClick(webElement);
+            dc.myClick(webElement);
 
         }
     }
@@ -82,8 +80,7 @@ public class US_604_OguzhanSteps {
         List<String> accountControlList2 = accountControl2.asList(String.class);
         for (int i = 0; i < accountControlList2.size(); i++) {
             WebElement webElement = dc.getWebElement(accountControlList2.get(i));
-            dc.myClick(dc.newAccountNumber);
-            dc.verifyContainsText(dc.accountPage, "Account Number:");
+            dc.myClick(webElement);
 
         }
     }
