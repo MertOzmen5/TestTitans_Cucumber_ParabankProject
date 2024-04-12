@@ -17,6 +17,7 @@ Feature: New Account Functionality
     And Account Successfully
       | newAccountNumber |
 
+
     And Select The Account Type Again
       | savings              |
       | accountIdSelect      |
