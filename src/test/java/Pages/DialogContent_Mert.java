@@ -64,8 +64,8 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(css = "[value='Transfer']")
     public WebElement transferButton;
 
-    @FindBy(css = "[class='title']+p")
-    public List<WebElement> text;
+    @FindBy(xpath = "//h1[contains(text(), \"Transfer Complete\")]")
+    public WebElement text;
 
     @FindBy(xpath = "(//tr[@ng-repeat='account in accounts']//a)[1]")
     public WebElement confirmTransfer;

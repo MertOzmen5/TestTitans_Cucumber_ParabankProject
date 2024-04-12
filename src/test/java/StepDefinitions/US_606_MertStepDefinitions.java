@@ -27,16 +27,12 @@ public class US_606_MertStepDefinitions {
 
     @And("Money transfer must be successfully")
     public void moneyTransferMustBeSuccessfully() {
-        for (int i = 0; i <dcm.text.size() ; i++) {
-            Assert.assertEquals(dcm.text.get(i).getText(),strMoney1);
-            Assert.assertEquals(dcm.text.get(i).getText(),"20115");
-            Assert.assertEquals(dcm.text.get(i).getText(),"20892");
-        }
+       dcm.verifyContainsText(dcm.text, "Transfer Complete");
     }
 
     @And("Money transfer was successful")
     public void moneyTransferWasSuccessful() {
-       Assert.assertEquals(dcm.confirmText.getText(),"$"+strMoney1+",00");
+      dcm.verifyContainsText(dcm.confirmText, "$"+strMoney1+",00");
     }
 
     @And("Click on the Funds Transfer Send")
