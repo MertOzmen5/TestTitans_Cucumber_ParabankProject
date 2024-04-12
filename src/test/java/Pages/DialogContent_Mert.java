@@ -70,8 +70,8 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(xpath = "(//tr[@ng-repeat='account in accounts']//a)[1]")
     public WebElement confirmTransfer;
 
-    @FindBy(xpath = "//table[@id='transactionTable']")
-    public List<WebElement> moneyValue;
+    @FindBy(css = "tr > td > a")
+    public WebElement moneyValue;
 
     @FindBy(xpath = "(//td[@align='right'])[5]//following::td")
     public WebElement confirmText;
@@ -114,6 +114,8 @@ public class DialogContent_Mert extends ParentPage {
                 return this.transferButton;
             case "confirmTransfer":
                 return this.confirmTransfer;
+            case "moneyValue" :
+                return this.moneyValue;
         }
         return null;
     }

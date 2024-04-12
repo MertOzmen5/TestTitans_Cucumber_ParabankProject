@@ -28,5 +28,6 @@ Feature: Transfer Funds Functionality
       | confirmTransfer |
 
     And Click on the Funds Transfer Send
+      | moneyValue |
 
     And Money transfer was successful
