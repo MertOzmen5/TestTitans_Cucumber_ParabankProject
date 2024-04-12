@@ -8,7 +8,6 @@ Feature: Update Contact information
       | updateContactInfo |
 
   Scenario Outline:
-
     Given Enter new information in the relevant fields and click on update button
       | firstNameInput | <firstName>   |
       | lastNameInput  | <lastName>    |
@@ -18,7 +17,7 @@ Feature: Update Contact information
       | zipCodeInput   | <zipCode>     |
       | phoneInput     | <phoneNumber> |
 
-    When User should successfully update the contact information
+    Then User should successfully update the contact information
       | updateProfileBtn     |
       | updateProfileSuccess |
 
@@ -26,10 +25,11 @@ Feature: Update Contact information
       | firstName | lastName | address | city    | state    | zipCode | phoneNumber |
       | Michael   | Scofield | Canal   | Chicago | Illinois | 10018   | 1388221     |
 
+
   Scenario:
     Given Delete at least three options from the contact information
 
-    When User should successfully confirm the warning message
+    Then User should successfully confirm the warning message
       | updateProfileBtn  |
       | updateProfileFail |
 
