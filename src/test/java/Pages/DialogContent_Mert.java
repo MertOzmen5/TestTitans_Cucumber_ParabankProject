@@ -55,25 +55,25 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(css = "[id='toAccountId']")
     public WebElement selectAccountButton;
 
-    @FindBy (css = "[id='toAccountId']>option:nth-child(2)")
+    @FindBy(css = "[id='toAccountId']>option:nth-child(2)")
     public WebElement transferAccount;
 
-    @FindBy (css = "[id='amount']")
+    @FindBy(css = "[id='amount']")
     public WebElement transferAmount;
 
-    @FindBy (css = "[value='Transfer']")
-    public  WebElement transferButton;
+    @FindBy(css = "[value='Transfer']")
+    public WebElement transferButton;
 
-    @FindBy (css = "[class='title']+p>span")
+    @FindBy(css = "[class='title']+p>span")
     public List<WebElement> text;
 
-    @FindBy (xpath = "(//tr[@ng-repeat='account in accounts']//a)[1]")
+    @FindBy(xpath = "(//tr[@ng-repeat='account in accounts']//a)[1]")
     public WebElement confirmTransfer;
 
-    @FindBy (xpath = "(//table[@id='transactionTable']//tbody/tr)[20]")
-    public WebElement moneyValue;
+    @FindBy(xpath = "//a[text()='Funds Transfer Sent']")
+    public List<WebElement> moneyValue;
 
-    @FindBy (xpath = "(//td[@align='right'])[5]//following::td")
+    @FindBy(xpath = "(//td[@align='right'])[5]//following::td")
     public WebElement confirmText;
 
 
@@ -114,12 +114,7 @@ public class DialogContent_Mert extends ParentPage {
                 return this.transferButton;
             case "confirmTransfer":
                 return this.confirmTransfer;
-            case "moneyValue":
-                return this.moneyValue;
-
         }
         return null;
     }
-
-
 }

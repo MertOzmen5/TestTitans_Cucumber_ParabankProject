@@ -19,13 +19,14 @@ Feature: Transfer Funds Functionality
     And Click on the Element in Dialog
       | transferButton |
 
-    And Money transfer must be successfull
+    And Money transfer must be successfully
 
     And Click on the element in LeftNav
       | accountsOverview |
 
     And Click on the Element in Dialog
       | confirmTransfer |
-      | moneyValue      |
+
+    And Click on the Funds Transfer Send
 
     And Money transfer was successful
