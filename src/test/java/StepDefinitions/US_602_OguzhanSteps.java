@@ -25,10 +25,10 @@ public class US_602_OguzhanSteps {
         ln.myClick(ln.loginButton);
 
     }
-//    @Then("User should be not login successfully")
-//    public void userShouldBeNotLoginSuccessfully() {
-//        dc.verifyContainsText(dc.loginError,"An internal error has occurred and has been logged.");
-//    }
+    @Then("User should be not login successfully")
+    public void userShouldBeNotLoginSuccessfully() {
+        dc.verifyContainsText(dc.loginError,"The username and password could not be verified.");
+    }
 
     @When("Enter username {string} and password {string} and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton(String username1, String password1) {
@@ -37,9 +37,9 @@ public class US_602_OguzhanSteps {
         ln.myClick(ln.loginButton);
     }
 
-//    @Then("User should be login successfully")
-//    public void userShouldBeLoginSuccessfully() {
-//        dc.verifyContainsText(dc.loginSuccess,"Welcome");
-//    }
+    @Then("User should be login successfully")
+    public void userShouldBeLoginSuccessfully() {
+        dc.verifyContainsText(dc.loginSuccess,"Welcome");
+    }
 }
 
