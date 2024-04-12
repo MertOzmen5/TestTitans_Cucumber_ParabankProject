@@ -42,7 +42,7 @@ public class US_606_MertStepDefinitions {
     @And("Click on the Funds Transfer Send")
     public void clickOnTheFundsTransferSend() {
         for (int i = 0; i <dcm.moneyValue.size() ; i++) {
-            FundsTransferSend=dcm.moneyValue.get(dcm.moneyValue.lastIndexOf(dcm.moneyValue));
+            FundsTransferSend=dcm.moneyValue.get(dcm.moneyValue.size()-1);
             dcm.myClick(FundsTransferSend);
         }
     }

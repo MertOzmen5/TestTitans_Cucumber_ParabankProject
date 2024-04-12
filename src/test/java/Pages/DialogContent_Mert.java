@@ -64,13 +64,13 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(css = "[value='Transfer']")
     public WebElement transferButton;
 
-    @FindBy(css = "[class='title']+p>span")
+    @FindBy(css = "[class='title']+p")
     public List<WebElement> text;
 
     @FindBy(xpath = "(//tr[@ng-repeat='account in accounts']//a)[1]")
     public WebElement confirmTransfer;
 
-    @FindBy(xpath = "//a[text()='Funds Transfer Sent']")
+    @FindBy(xpath = "//table[@id='transactionTable']")
     public List<WebElement> moneyValue;
 
     @FindBy(xpath = "(//td[@align='right'])[5]//following::td")
