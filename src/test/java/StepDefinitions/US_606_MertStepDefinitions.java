@@ -1,8 +1,10 @@
 package StepDefinitions;
 
 import Pages.DialogContent_Mert;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
@@ -31,7 +33,7 @@ public class US_606_MertStepDefinitions {
 
     @And("Money transfer was successful")
     public void moneyTransferWasSuccessful() {
-        dcm.verifyContainsText(dcm.confirmText, "$"+strMoney1+",00");
+        dcm.verifyContainsText(dcm.confirmText, "Funds Transfer Sent");
     }
 
     @And("Click on the Funds Transfer Send")
@@ -44,3 +46,5 @@ public class US_606_MertStepDefinitions {
         }
     }
 }
+
+

@@ -72,8 +72,9 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(css = "tr > td > a")
     public WebElement moneyValue;
 
-    @FindBy(xpath = "(//td[@align='right'])[5]//following::td")
+    @FindBy(xpath = "(//td[@align='right'])[3]//following::td")
     public WebElement confirmText;
+
 
 
     public WebElement getWebElement(String element) {
