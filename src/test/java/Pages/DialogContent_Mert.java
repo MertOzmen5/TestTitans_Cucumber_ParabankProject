@@ -1,7 +1,6 @@
 package Pages;
 
 import Utilities.GWD;
-import io.cucumber.java.zh_tw.假設;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

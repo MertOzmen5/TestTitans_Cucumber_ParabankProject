@@ -4,12 +4,11 @@ import Pages.DialogContent_Mert;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+
 
 import java.util.List;
 
 public class US_606_MertStepDefinitions {
-    public WebElement FundsTransferSend;
     DialogContent_Mert dcm = new DialogContent_Mert();
     int money1 = (int) (Math.random() * 800);
     String strMoney1 = String.valueOf(money1);
