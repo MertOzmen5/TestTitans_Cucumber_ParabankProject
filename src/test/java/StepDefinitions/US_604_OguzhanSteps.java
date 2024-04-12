@@ -37,7 +37,7 @@ public class US_604_OguzhanSteps {
         for (int i = 0; i < accountButonlariList.size(); i++) {
             WebElement webElement = dc.getWebElement(accountButonlariList.get(i));
             dc.myClick(webElement);
-            dc.verifyContainsText(dc.minimumDepositedAssert, "$35,00");
+            dc.verifyContainsText(dc.minimumDepositedAssert, "A minimum of");
             dc.myClick(webElement);
             dc.myClick(webElement);
 

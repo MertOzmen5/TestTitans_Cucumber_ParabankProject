@@ -5,7 +5,7 @@ Feature: Login Functionality
 
   Scenario Outline: Login with valid username and password
     When Enter wrong username "<username>" and password "<password>" and click login button
-#    Then User should be not login successfully
+    Then User should be not login successfully
 
     Examples:
       | username | password |
@@ -13,7 +13,7 @@ Feature: Login Functionality
 
   Scenario Outline: Login with valid username and password
     When Enter username "<username1>" and password "<password1>" and click login button
-#    Then User should be login successfully
+    Then User should be login successfully
 
     Examples:
       | username1   | password1 |
