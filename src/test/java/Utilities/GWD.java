@@ -14,13 +14,6 @@ public class GWD {
 
     public static ThreadLocal<String> threadBrowserName = new ThreadLocal<>(); // o thread e özel browser name
 
-    //  threadDriver.get() -> bulunduğu hattaki driverı ver
-    //  threadDriver.set(driver) -> bulunduğu hata driver set et
-
-    // Her bir sürecin kendine özel STATİC driverı olmalı : Local Static diyeceğiz
-    // süreç = Thread
-    // Thread.Sleep => ilgili süreci durduryor belli süre
-    // her bir Thread in kendine özel STATİC i olmalı, yani LOCAL Static
 
     public static WebDriver getDriver() {
 

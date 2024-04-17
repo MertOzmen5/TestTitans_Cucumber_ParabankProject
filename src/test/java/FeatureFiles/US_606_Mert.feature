@@ -5,6 +5,7 @@ Feature: Transfer Funds Functionality
     When Enter username and password and click on login button
     Then User should login successfully
 
+    @PaymentTest @Regression
   Scenario: Money transfer between different accounts
     When Click on the element in LeftNav
       | transferFundsButton |

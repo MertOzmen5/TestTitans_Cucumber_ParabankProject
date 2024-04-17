@@ -17,13 +17,13 @@ public class Hooks {
     public void after(Scenario senaryo) {
 
         // senaryo fail olduysa ekran kaydı al
-       // if (senaryo.isFailed()) {
+        if (senaryo.isFailed()) {
             // aşağıdaki bölüm sadece extend report plugini devrede ise açılır.
-           // TakesScreenshot ts = (TakesScreenshot) GWD.getDriver();
-           // byte[] memory = ts.getScreenshotAs(OutputType.BYTES);
+            TakesScreenshot ts = (TakesScreenshot) GWD.getDriver();
+            byte[] memory = ts.getScreenshotAs(OutputType.BYTES);
 
-           // senaryo.attach(memory, "image/png", "screenshot name");
-        //}
+            senaryo.attach(memory, "image/png", "screenshot name");
+        }
 
         GWD.quitDriver();
 

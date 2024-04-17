@@ -3,6 +3,7 @@ Feature: Register Functionality
   Background:
     Given Navigate to Parabank
 
+  @SmokeTest @Regression @Accounts
   Scenario Outline: Register Funcitonality
     When Click on the element in LeftNav
       | registerButton |
