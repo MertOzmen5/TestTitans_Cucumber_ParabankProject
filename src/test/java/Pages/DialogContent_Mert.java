@@ -1,7 +1,6 @@
 package Pages;
 
 import Utilities.GWD;
-import io.cucumber.java.zh_tw.假設;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -64,17 +63,18 @@ public class DialogContent_Mert extends ParentPage {
     @FindBy(css = "[value='Transfer']")
     public WebElement transferButton;
 
-    @FindBy(css = "[class='title']+p")
-    public List<WebElement> text;
+    @FindBy(xpath = "//h1[contains(text(), \"Transfer Complete\")]")
+    public WebElement text;
 
     @FindBy(xpath = "(//tr[@ng-repeat='account in accounts']//a)[1]")
     public WebElement confirmTransfer;
 
-    @FindBy(xpath = "//table[@id='transactionTable']")
-    public List<WebElement> moneyValue;
+    @FindBy(css = "tr > td > a")
+    public WebElement moneyValue;
 
-    @FindBy(xpath = "(//td[@align='right'])[5]//following::td")
+    @FindBy(xpath = "(//td[@align='right'])[3]//following::td")
     public WebElement confirmText;
+
 
 
     public WebElement getWebElement(String element) {
@@ -114,6 +114,8 @@ public class DialogContent_Mert extends ParentPage {
                 return this.transferButton;
             case "confirmTransfer":
                 return this.confirmTransfer;
+            case "moneyValue" :
+                return this.moneyValue;
         }
         return null;
     }

@@ -15,7 +15,7 @@ public class DialogContent_Oguzhan extends ParentPage {
     public WebElement loginError;
     @FindBy(xpath = "//p[@class='smallText']")
     public WebElement loginSuccess;
-    @FindBy(xpath = "//b[text()='A minimum of $35,00 must be deposited into this account at time of opening. Please choose an existing account to transfer funds into the new account.']")
+    @FindBy(xpath = "//select[@id='type']//following::b")
     public WebElement minimumDepositedAssert;
     @FindBy(css = "[value='0']")
     public WebElement checking;
