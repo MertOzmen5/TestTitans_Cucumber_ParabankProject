@@ -31,8 +31,6 @@ These environments facilitate the implementation of different test scenarios.
 |Oğuzhan Aydın|602-604|Team Lead|megaozi9517536@gmail.com|[OguzhanAydin93](https://github.com/OguzhanAydin93)|
 
 
-#### Oğuzhan Aydın = US-602-604
-
 ## Project Objectives:
 
 #### Enhance Functional Test Automation: 
