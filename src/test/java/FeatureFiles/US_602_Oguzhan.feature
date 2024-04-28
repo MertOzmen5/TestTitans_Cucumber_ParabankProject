@@ -3,8 +3,8 @@ Feature: Login Functionality
   Background:
     Given Navigate to Parabank
 
-    @Accounts @Smoke @Reggresion
-  Scenario Outline: Login with valid username and password
+  @Accounts @Smoke @Reggresion
+  Scenario Outline: Login with invalid username and password
     When Enter wrong username "<username>" and password "<password>" and click login button
     Then User should be not login successfully
 
