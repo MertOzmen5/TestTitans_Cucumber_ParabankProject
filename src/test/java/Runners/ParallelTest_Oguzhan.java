@@ -6,8 +6,6 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-public class ParallelTest_Oguzhan {
-
     @CucumberOptions(
             tags = "@Regression or @SmokeTest or @Accounts",
             features = {"src/test/java/FeatureFiles"},
@@ -15,7 +13,7 @@ public class ParallelTest_Oguzhan {
             plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
     )
 
-    public class ParallelTest_Mert extends AbstractTestNGCucumberTests {
+    public class ParallelTest_Oguzhan extends AbstractTestNGCucumberTests {
 
         @BeforeClass
         @Parameters("browserTipi")
@@ -25,4 +23,4 @@ public class ParallelTest_Oguzhan {
 
         }
     }
-}
+
