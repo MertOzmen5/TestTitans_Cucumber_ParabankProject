@@ -3,6 +3,7 @@ Feature: New Account Functionality
   Background:
     Given Navigate to Parabank
 
+  @Accounts @Smoke @Reggresion
   Scenario Outline: Create New Account
     Given Enter username "<username1>" and password "<password1>" and click login button
     When Click On The Open New Account
